@@ -1,0 +1,5 @@
+dependencies {
+    // Versions pinned to the GTNH 2.9.0-beta-3 instance used for development.
+    implementation("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-1050-GTNH:dev")
+    implementation("com.github.GTNewHorizons:AE2FluidCraft-Rework:1.5.106-gtnh:dev")
+}
