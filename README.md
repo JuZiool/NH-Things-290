@@ -10,6 +10,14 @@ The initial development target is the local **GTNH 2.9.0-beta-3** instance:
 - AE2 Fluid Crafting `1.5.106-gtnh`
 - GregTech 5 Unofficial `5.09.54.133`
 
+## Implemented
+
+- Unrestricted item storage cells: 1k through 16384k
+- Unrestricted fluid storage cells: 1k through 16384k
+- Shared unrestricted cell housing and crafting recipes
+- Item and fluid partition filters, upgrades, drive/chest status and safe empty-cell disassembly
+- UUID-backed world storage for cell contents
+
 ## Development
 
 Requirements:
