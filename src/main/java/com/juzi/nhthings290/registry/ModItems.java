@@ -1,5 +1,6 @@
 package com.juzi.nhthings290.registry;
 
+import com.juzi.nhthings290.item.ItemFlightCharm;
 import com.juzi.nhthings290.item.ItemUnrestrictedShell;
 import com.juzi.nhthings290.storage.UnrestrictedCellHandler;
 import com.juzi.nhthings290.storage.UnrestrictedCellItem;
@@ -10,6 +11,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public final class ModItems {
 
+    public static ItemFlightCharm flightCharm;
     public static ItemUnrestrictedShell unrestrictedShell;
 
     public static UnrestrictedCellItem itemCell1k;
@@ -33,6 +35,9 @@ public final class ModItems {
     private ModItems() {}
 
     public static void register() {
+        flightCharm = new ItemFlightCharm();
+        GameRegistry.registerItem(flightCharm, "flight_charm");
+
         unrestrictedShell = new ItemUnrestrictedShell();
         GameRegistry.registerItem(unrestrictedShell, "unrestricted_shell");
 

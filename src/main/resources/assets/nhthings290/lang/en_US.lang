@@ -1,3 +1,8 @@
+item.flight_charm.name=Flight Charm
+item.flight_charm.tooltip.shift=Hold Shift for details
+item.flight_charm.tooltip.detail1=Grants creative flight while worn
+item.flight_charm.tooltip.detail2=Consumes about one hunger shank per 30s of flight
+item.flight_charm.tooltip.detail3=Flight stops below two hunger shanks
 item.unrestricted_shell.name=Unrestricted Cell Housing
 item.unrestricted_item_cell_1k.name=1k Unrestricted Item Cell
 item.unrestricted_item_cell_4k.name=4k Unrestricted Item Cell

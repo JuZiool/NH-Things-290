@@ -3,7 +3,7 @@ package com.juzi.nhthings290.storage;
 /** Capacity arithmetic shared by unrestricted fluid cells and their tests. */
 public final class UnrestrictedFluidCellStorageLogic {
 
-    public static final long AMOUNT_PER_BYTE = 8192L;
+    public static final long AMOUNT_PER_BYTE = 4096L;
 
     private UnrestrictedFluidCellStorageLogic() {}
 

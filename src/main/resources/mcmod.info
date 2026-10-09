@@ -3,7 +3,7 @@
   "modList": [{
     "modid": "${modId}",
     "name": "${modName}",
-    "description": "An Applied Energistics 2 addon for GT New Horizons 2.9.",
+    "description": "Utility items and Applied Energistics 2 storage cells for GT New Horizons 2.9.",
     "version": "${modVersion}",
     "mcversion": "${minecraftVersion}",
     "url": "https://github.com/JuZiool/NH-Things-290",
@@ -13,7 +13,14 @@
     "logoFile": "",
     "screenshots": [],
     "parent": "",
-    "requiredMods": ["gregtech", "appliedenergistics2", "ae2fc"],
+    "requiredMods": [
+      "gregtech",
+      "appliedenergistics2",
+      "ae2fc",
+      "Baubles|Expanded",
+      "Thaumcraft",
+      "ThaumicExploration"
+    ],
     "dependencies": [],
     "dependants": [],
     "useDependencyInformation": true

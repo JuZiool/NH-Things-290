@@ -62,13 +62,13 @@ public class CellFluidDataStorageTest {
         final Fluid fluid = new Fluid("unrestricted_fluid_cell_nbt_test");
         CellFluidDataStorage.FluidListFactory factory = new TestFluidListFactory();
         CellFluidDataStorage storage = new CellFluidDataStorage(UUID.randomUUID(), factory);
-        // One byte over a 1024-byte cell at 8192 mB/byte: 1024*8192+1
-        storage.addImported(fluidStack(fluid, 8388609));
+        // One byte over a 1024-byte cell at 4096 mB/byte: 1024*4096+1
+        storage.addImported(fluidStack(fluid, 4194305));
 
         NBTTagList saved = storage.writeToNBT();
         assertEquals(1, saved.tagCount());
         NBTTagCompound tag = saved.getCompoundTagAt(0);
-        assertEquals(8388609L, tag.getLong("Cnt"));
+        assertEquals(4194305L, tag.getLong("Cnt"));
         CellFluidDataStorage restored = new CellFluidDataStorage(
             UUID.randomUUID(),
             factory,
@@ -80,9 +80,9 @@ public class CellFluidDataStorageTest {
                 }
             });
         restored.readFromNBT(saved);
-        assertEquals(8388609L, restored.getStoredFluidCount());
+        assertEquals(4194305L, restored.getStoredFluidCount());
         assertEquals(1025L, restored.getUsedBytes());
-        assertEquals(8388609L, restored.extract(fluidStack(fluid, 8388609), 8388609));
+        assertEquals(4194305L, restored.extract(fluidStack(fluid, 4194305), 4194305));
         assertEquals(0L, restored.getStoredFluidCount());
         assertEquals(0L, restored.getStoredFluidTypes());
     }
@@ -90,7 +90,7 @@ public class CellFluidDataStorageTest {
     @Test
     public void overCapacityImportedDataCanBeExtractedButCannotAcceptMore() throws Exception {
         Fluid fluid = new Fluid("unrestricted_fluid_cell_over_capacity_test");
-        IAEFluidStack imported = fluidStack(fluid, 8388609);
+        IAEFluidStack imported = fluidStack(fluid, 4194305);
         UnrestrictedFluidCellItem type = new UnrestrictedFluidCellItem(
             "unrestricted_fluid_cell_over_capacity_test",
             1024);
@@ -105,11 +105,11 @@ public class CellFluidDataStorageTest {
         IAEFluidStack rejected = inventory.injectItems(fluidStack(fluid, 1), Actionable.SIMULATE, null);
         assertNotNull(rejected);
         assertEquals(1L, rejected.getStackSize());
-        assertEquals(8388609L, inventory.getStoredFluidCount());
+        assertEquals(4194305L, inventory.getStoredFluidCount());
         assertEquals(0L, inventory.getRemainingFluidCount());
         assertEquals(
-            8388609L,
-            inventory.extractItems(fluidStack(fluid, 8388609), Actionable.MODULATE, null)
+            4194305L,
+            inventory.extractItems(fluidStack(fluid, 4194305), Actionable.MODULATE, null)
                 .getStackSize());
     }
 
@@ -126,9 +126,9 @@ public class CellFluidDataStorageTest {
 
         assertEquals(0, type.getBytesPerType(new ItemStack(type)));
         assertEquals(0, inventory.getBytesPerType());
-        assertEquals(8388608L, inventory.getRemainingFluidCount());
+        assertEquals(4194304L, inventory.getRemainingFluidCount());
         assertEquals(0L, inventory.getStoredFluidTypes());
-        assertNull(inventory.injectItems(fluidStack(fluid, 8192), Actionable.MODULATE, null));
+        assertNull(inventory.injectItems(fluidStack(fluid, 4096), Actionable.MODULATE, null));
         assertEquals(1L, inventory.getStoredFluidTypes());
         assertEquals(1023L, inventory.getFreeBytes());
     }

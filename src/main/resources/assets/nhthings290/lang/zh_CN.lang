@@ -1,3 +1,8 @@
+item.flight_charm.name=飞行符咒
+item.flight_charm.tooltip.shift=按住 Shift 查看详情
+item.flight_charm.tooltip.detail1=佩戴后获得创造飞行能力
+item.flight_charm.tooltip.detail2=每累计飞行 30 秒消耗约一格鸡腿
+item.flight_charm.tooltip.detail3=饥饿值低于两格时停止飞行
 item.unrestricted_shell.name=无限制外壳
 item.unrestricted_item_cell_1k.name=1k 无限制物品磁盘
 item.unrestricted_item_cell_4k.name=4k 无限制物品磁盘

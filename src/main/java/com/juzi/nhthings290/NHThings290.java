@@ -21,7 +21,8 @@ import cpw.mods.fml.relauncher.SideOnly;
     name = NHThings290.MOD_NAME,
     version = Tags.VERSION,
     acceptedMinecraftVersions = "[1.7.10]",
-    dependencies = "required-after:gregtech;required-after:appliedenergistics2;required-after:ae2fc")
+    dependencies = "required-after:gregtech;required-after:appliedenergistics2;required-after:ae2fc;"
+        + "required-after:Baubles|Expanded;required-after:Thaumcraft;required-after:ThaumicExploration")
 public final class NHThings290 {
 
     public static final String MOD_ID = "nhthings290";
