@@ -2,7 +2,7 @@
 
 Utility items and an Applied Energistics 2 addon for **GT New Horizons 2.9** on Minecraft 1.7.10.
 
-Current development release: **v0.3.0-dev**.
+Current development release: **v0.3.1-dev**.
 
 ## Current target
 

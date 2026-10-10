@@ -51,12 +51,12 @@ public final class NHThings290 {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModItems.register();
-        ModMachines.register();
         LOG.info("Loading {} {}", MOD_NAME, Tags.VERSION);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        ModMachines.register();
         ModItems.registerCellHandler();
         ModRecipes.register();
         LOG.info("{} initialized for GTNH 2.9.0-beta-3", MOD_NAME);
