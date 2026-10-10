@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.juzi.nhthings290.registry.ModItems;
+import com.juzi.nhthings290.registry.ModMachines;
 import com.juzi.nhthings290.registry.ModRecipes;
 
 import cpw.mods.fml.common.Mod;
@@ -50,6 +51,7 @@ public final class NHThings290 {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModItems.register();
+        ModMachines.register();
         LOG.info("Loading {} {}", MOD_NAME, Tags.VERSION);
     }
 

@@ -3,7 +3,7 @@
   "modList": [{
     "modid": "${modId}",
     "name": "${modName}",
-    "description": "Utility items and Applied Energistics 2 storage cells for GT New Horizons 2.9.",
+    "description": "Utility items, Applied Energistics 2 storage cells, and wireless charging stations for GT New Horizons 2.9.",
     "version": "${modVersion}",
     "mcversion": "${minecraftVersion}",
     "url": "https://github.com/JuZiool/NH-Things-290",

@@ -2,6 +2,7 @@ package com.juzi.nhthings290.registry;
 
 import com.juzi.nhthings290.item.ItemFlightCharm;
 import com.juzi.nhthings290.item.ItemUnrestrictedShell;
+import com.juzi.nhthings290.item.ItemWirelessSupplyCard;
 import com.juzi.nhthings290.storage.UnrestrictedCellHandler;
 import com.juzi.nhthings290.storage.UnrestrictedCellItem;
 import com.juzi.nhthings290.storage.UnrestrictedFluidCellItem;
@@ -12,6 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public final class ModItems {
 
     public static ItemFlightCharm flightCharm;
+    public static ItemWirelessSupplyCard wirelessSupplyCard;
     public static ItemUnrestrictedShell unrestrictedShell;
 
     public static UnrestrictedCellItem itemCell1k;
@@ -35,6 +37,9 @@ public final class ModItems {
     private ModItems() {}
 
     public static void register() {
+        wirelessSupplyCard = new ItemWirelessSupplyCard();
+        GameRegistry.registerItem(wirelessSupplyCard, "wireless_supply_card");
+
         flightCharm = new ItemFlightCharm();
         GameRegistry.registerItem(flightCharm, "flight_charm");
 
